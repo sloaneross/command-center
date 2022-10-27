@@ -1,5 +1,18 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <WeatherCard/>
 </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+// Components
+import WeatherCard from '../components/WeatherCard.vue';
+
+export default defineComponent({
+  name: 'AboutView',
+
+  components: {
+    WeatherCard,
+  },
+});
+</script>
