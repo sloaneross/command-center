@@ -8,3 +8,8 @@ module.exports = defineConfig({
 		}
   }
 })
+module.exports = {
+  devServer: {
+    proxy: 'http://localhost'
+  }
+}
