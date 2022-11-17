@@ -80,7 +80,7 @@ export default defineComponent({
 
   },
   mounted() {
-    fetch("http://localhost:5000/by-id/7327")
+    fetch("http://localhost:5001/by-id/7327")
       .then (response => response.json())
       .then (data => {
         const north :[] = data.data[0]["N"]

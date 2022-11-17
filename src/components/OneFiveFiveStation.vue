@@ -80,7 +80,7 @@ computed: {
 
 },
 mounted() {
-  fetch("http://localhost:5000/by-id/f4eb")
+  fetch("http://localhost:5001/by-id/f4eb")
     .then (response => response.json())
     .then (data => {
       const north :[] = data.data[0]["N"]
