@@ -49,28 +49,54 @@
           ></v-slider>
       </div>
       <br>
-      <v-row class="transparent">
-        <v-col
-        >
-        <v-row>
-          <v-col>
-            {{forecasts[time].shortForecast}}
-          </v-col>
-          <v-col>
-            {{forecasts[time].temperature}}
-          </v-col>
-        </v-row>
+      <v-row>
+        
+        <v-col>
+          <v-card>
+            <v-card-title>
+              {{forecasts[time].shortForecast}}
+            </v-card-title>
+            <v-card-subtitle>
+              {{forecasts[time].temperature}}
+            </v-card-subtitle>
+            <br/>
+            <v-row>
+              <v-col>
+                <div class="justify-space-between">
+                  <v-list-item
+                    density="compact"
+                    prepend-icon="mdi-weather-windy"
+                  >
+                    <v-list-item-subtitle>{{forecasts[time].windSpeed}}</v-list-item-subtitle>
+                  </v-list-item>
+                  
+                  <v-list-item>
+                    <p>
+                      {{forecasts[time].longForecast}}
+                    </p>
+                  </v-list-item>
+                </div>
+              </v-col>
+              
+              <v-col>
+                <v-img
+                align="center"
+                :src=forecasts[time].icon
+                :alt=forecasts[time].shortForecast
+                cover
+                width="150">
+                </v-img>
+              </v-col>
+              
+            </v-row>
+            
+          </v-card>
         </v-col>
         <v-spacer/>
-        <v-col>
-          <v-img
-            :src=forecasts[time].icon
-            :alt=forecasts[time].shortForecast
-            width="92"
-        ></v-img>
-        </v-col>
-
       </v-row>
+      
+
+      
     </div>
   </v-expand-transition>
 

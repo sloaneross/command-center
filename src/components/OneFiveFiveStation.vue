@@ -12,7 +12,7 @@
   </v-card-text>
 
 <v-row
-no gutters>
+no-gutters>
   <v-col
   align="center">
     <v-card>
@@ -72,8 +72,8 @@ data () {
 computed: {
   getColor() {
     return (minutes: Duration) =>{
-      if (minutes < Duration.fromMillis(120000)) return "red"
-      else if (minutes < Duration.fromMillis(420000)) return "green"
+      if (minutes < Duration.fromMillis(300000)) return "red"
+      else if (minutes < Duration.fromMillis(660000)) return "green"
       else return "grey"
     }
   }

@@ -12,7 +12,7 @@
     </v-card-text>
   
   <v-row
-  no gutters>
+  no-gutters>
     <v-col
     align="center">
       <v-card>
@@ -33,7 +33,8 @@
     </v-col>
     <v-col
     align="center">
-      <v-card>
+      <v-card
+      align="center">
         <v-card-text>
           <div>Downtown</div>
         </v-card-text>
@@ -72,8 +73,8 @@ export default defineComponent({
   computed: {
     getColor() {
       return (minutes: Duration) =>{
-        if (minutes < Duration.fromMillis(120000)) return "red"
-        else if (minutes < Duration.fromMillis(420000)) return "green"
+        if (minutes < Duration.fromMillis(180000)) return "red"
+        else if (minutes < Duration.fromMillis(480000)) return "green"
         else return "grey"
       }
     }
